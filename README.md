@@ -49,6 +49,8 @@ cd js-mvc
 
 #### Getting dependencies and running the server (DEV)
 
+> Is required to create one file holding the variables ACCESS_TOKEN_SECRET, REFRESH_TOKEN_SECRET and DATABASE_URI (e.g. .env)
+
 On a terminal inside the project path run the commands below:
 
 ```
