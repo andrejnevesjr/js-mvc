@@ -51,6 +51,24 @@ cd js-mvc
 
 #### Getting dependencies and running the server (DEV)
 
+> Requires an .env files holding the following variables
+
+```
+ACCESS_TOKEN_SECRET=YOUR_TOKEN
+REFRESH_TOKEN_SECRET=YOUR_TOKEN_REFRESH
+DATABASE_URI=YOUR_URL_TO_MONGO_DB
+```
+
+> If you want to create an user with Admin or Editor role through the API you can you the pattern below:
+
+```
+ {
+"user": "john.wick",
+"pwd": "SOMERANDOMPASS",
+"roles": {Editor":1984,"Admin":5150}
+ }
+```
+
 On a terminal inside the project path run the commands below:
 
 ```
