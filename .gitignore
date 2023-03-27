@@ -25,3 +25,6 @@ out
 
 # MAC OS files
 .DS_Store
+
+# Environment DOTENV files
+.env

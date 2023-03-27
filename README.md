@@ -64,6 +64,17 @@ The Project will be available under the URL below
 http://localhost:3500
 ```
 
+## Branches
+
+| Version | Path       | Description                                       |
+| ------- | ---------- | ------------------------------------------------- |
+| 1.0     | main       | `Boilerplate for node project`                    |
+| 1.1     | aut        | `Adding authentication - bcrypt`                  |
+| 1.2     | jwt        | `Adding JWT token`                                |
+| 1.3     | roles      | `Adding roles to manage permissions on endpoints` |
+| 1.4     | data-model | `Adding data models (Mongose + MongoDB)`          |
+| 1.5     | CRUD       | `Async CRUD`                                      |
+
 ## References
 
 [DaveGrayTeachesCode](https://www.youtube.com/@DaveGrayTeachesCode)
