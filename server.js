@@ -5,10 +5,16 @@ const cors = require("cors");
 const corsOptions = require("./config/corsOptions");
 const { logger } = require("./middleware/logEvents");
 const errorHandler = require("./middleware/errorHandler");
+const verifyJWT = require("./middleware/verifyJWT");
+const cookieParser = require("cookie-parser");
+const credentials = require("./middleware/credentials");
 const PORT = process.env.PORT || 3500;
 
 // Custom middleware logger
 app.use(logger);
+// Handle options credentials check - before CORS
+// and fetch cookies credentials requirement
+app.use(credentials);
 // Cors
 app.use(cors(corsOptions));
 
@@ -19,6 +25,9 @@ app.use(express.urlencoded({ extended: false }));
 
 // built-in middleware for jso
 app.use(express.json());
+
+// middleware for cookies
+app.use(cookieParser());
 
 // serve static files (CSS, IMG, DATA)
 // Only for webpages, API does not require that
@@ -31,6 +40,12 @@ app.use("/", require("./routes/root"));
 app.use("/register", require("./routes/register"));
 // authentication
 app.use("/auth", require("./routes/auth"));
+// verify jwt
+app.use("/refresh", require("./routes/refresh"));
+// logout
+app.use("/logout", require("./routes/logout"));
+// check jwt
+app.use(verifyJWT);
 // employees
 app.use("/employees", require("./routes/api/employees"));
 
