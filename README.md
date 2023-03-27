@@ -51,7 +51,8 @@ cd js-mvc
 
 #### Getting dependencies and running the server (DEV)
 
-> Requires an .env files holding the following variables
+> NOTE: Requires an .env files holding the following variables.
+> NOTE2: If you are going to use the Dockerfile present here is also required to add the PORT variable
 
 ```
 ACCESS_TOKEN_SECRET=YOUR_TOKEN
