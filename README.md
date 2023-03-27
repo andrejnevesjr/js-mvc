@@ -73,7 +73,7 @@ http://localhost:3500
 | 1.2     | jwt        | `Adding JWT token`                                |
 | 1.3     | roles      | `Adding roles to manage permissions on endpoints` |
 | 1.4     | data-model | `Adding data models (Mongose + MongoDB)`          |
-| 1.5     | CRUD       | `Async CRUD`                                      |
+| 1.5     | crud       | `Async CRUD`                                      |
 
 ## References
 
