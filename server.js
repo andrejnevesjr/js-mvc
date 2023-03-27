@@ -27,7 +27,11 @@ app.use(express.static(path.join(__dirname, "/public")));
 // Routes
 // Root
 app.use("/", require("./routes/root"));
-// subdir
+// register
+app.use("/register", require("./routes/register"));
+// authentication
+app.use("/auth", require("./routes/auth"));
+// employees
 app.use("/employees", require("./routes/api/employees"));
 
 // Custom 404 handling
