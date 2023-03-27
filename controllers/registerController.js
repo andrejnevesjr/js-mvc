@@ -2,7 +2,7 @@ const User = require("../model/User");
 const bcrypt = require("bcrypt");
 
 const handleNewUser = async (req, res) => {
-  const { user, pwd } = req.body;
+  const { user, pwd, roles } = req.body;
   if (!user || !pwd)
     return res
       .status(400)
@@ -23,6 +23,7 @@ const handleNewUser = async (req, res) => {
     const result = await User.create({
       username: user,
       password: hashedPwd,
+      roles: roles,
     });
 
     console.log(result);
