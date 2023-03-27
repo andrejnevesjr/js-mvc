@@ -1,5 +1,7 @@
 # Node Express (MVC)
 
+> Adding JWT token
+
 ## Table of contents
 
 - [Node Express (MVC)](<#node--express--(mvc)>)
