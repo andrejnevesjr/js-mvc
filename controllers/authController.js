@@ -22,9 +22,15 @@ const handleLogin = async (req, res) => {
   // Evaluate password
   const match = await bcrypt.compare(pwd, foundUser.password);
   if (match) {
+    const roles = Object.values(foundUser.roles);
     // Create JWT
     const accessToken = jwt.sign(
-      { username: foundUser.username },
+      {
+        UserInfo: {
+          username: foundUser.username,
+          roles: roles,
+        },
+      },
       process.env.ACCESS_TOKEN_SECRET,
       { expiresIn: "30s" }
     );
@@ -49,6 +55,7 @@ const handleLogin = async (req, res) => {
 
     // Answer for API call
     // Sending refreshToken as cookie on HTTP only mode (Not available to JS)
+    // {secure: true } => Must be used while using chrome to run with Thunder client is must not exists here
     res.cookie("jwt", refreshToken, {
       httpOnly: true,
       sameSite: "none",
