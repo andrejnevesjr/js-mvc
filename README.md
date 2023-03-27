@@ -1,5 +1,7 @@
 # Node Express (MVC)
 
+> Adding roles to manage permissions on endpoints
+
 ## Table of contents
 
 - [Node Express (MVC)](<#node--express--(mvc)>)
