@@ -1,6 +1,6 @@
 # Node Express (MVC)
 
-> Adding roles to manage permissions on endpoints
+> Adding roles to manage permissions on endpoints + CRUD
 
 ## Table of contents
 
