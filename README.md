@@ -1,5 +1,7 @@
 # Node Express (MVC)
 
+> Adding authentication - bcrypt with module
+
 ## Table of contents
 
 - [Node Express (MVC)](<#node--express--(mvc)>)
